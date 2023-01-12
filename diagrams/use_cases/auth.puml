@@ -1,0 +1,22 @@
+@startuml Authentication
+
+skinparam actorStyle awesome
+left to right direction
+
+actor "Visitor" as visitor
+actor "Member"as member
+actor "User" as user
+
+package Application {
+    usecase Login as login
+    usecase Register as register
+    usecase "Forgot password" as forgot_password
+    usecase Logout as logout
+}
+
+visitor --> register
+member --> login
+member --> forgot_password
+user --> logout
+
+@enduml
