@@ -1,0 +1,25 @@
+@startuml Dashboard
+
+skinparam actorStyle awesome
+left to right direction
+
+actor "User" as user
+actor "Student" as student
+actor "Teacher" as teacher
+
+package Learn@Home {
+    package Dashboard {
+        usecase "View tasks summary" as view_tasks_summary
+        usecase "View calendar events summary" as view_calendar_events_summary
+        usecase "View amount of unread message" as view_unread_messages_count
+    }
+}
+
+teacher --|> user
+student --|> user
+
+user --> view_tasks_summary
+user --> view_calendar_events_summary
+user --> view_unread_messages_count
+
+@enduml

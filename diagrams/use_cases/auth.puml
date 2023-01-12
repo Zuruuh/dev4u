@@ -7,16 +7,22 @@ actor "Visitor" as visitor
 actor "Member"as member
 actor "User" as user
 
-package Application {
-    usecase Login as login
-    usecase Register as register
-    usecase "Forgot password" as forgot_password
-    usecase Logout as logout
+package Learn@Home {
+    package Auth {
+        usecase "Login" as login
+        usecase "Register" as register
+        usecase "Forgot password" as forgot_password
+        usecase "Logout" as logout
+        usecase "Delete account" as delete_account
+    }
 }
 
 visitor --> register
-member --> login
-member --> forgot_password
-user --> logout
+member  --> login
+member  --> forgot_password
+user    --> logout
+user    --> delete_account
+
+delete_account ..> logout : <<include>>
 
 @enduml

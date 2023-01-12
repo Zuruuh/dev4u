@@ -1,0 +1,23 @@
+@startuml Tasks
+
+skinparam actorStyle awesome
+left to right direction
+
+actor "User" as user
+actor "Student" as student
+actor "Teacher" as teacher
+
+package Learn@Home {
+    package Tasks {
+        usecase "Create a task for themself" as create_task_for_self
+        usecase "Create a task for one of their student" as create_task_for_student
+    }
+}
+
+teacher --|> user
+student --|> user
+
+student --> create_task_for_self
+teacher --> create_task_for_student
+
+@enduml

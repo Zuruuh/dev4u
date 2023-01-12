@@ -1,0 +1,23 @@
+@startuml Calendar
+
+skinparam actorStyle awesome
+left to right direction
+
+actor "User" as user
+actor "Student" as student
+actor "Teacher" as teacher
+
+package Learn@Home {
+    package Calendar {
+        usecase "View all events for N \n period of time" as view_all_events
+        usecase "Create a new event for themselves" as create_event_for_themselves
+    }
+}
+
+teacher --|> user
+student --|> user
+
+user --> view_all_events
+user --> create_event_for_themselves
+
+@enduml

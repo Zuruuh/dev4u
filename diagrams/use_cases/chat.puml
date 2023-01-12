@@ -1,0 +1,23 @@
+@startuml Chat
+
+skinparam actorStyle awesome
+left to right direction
+
+actor "User" as user
+actor "Student" as student
+actor "Teacher" as teacher
+
+package Learn@Home {
+    package Chat {
+        usecase "View messages" as view_messages
+        usecase "Send a message" as send_a_message
+    }
+}
+
+teacher --|> user
+student --|> user
+
+user --> view_messages
+user --> send_a_message
+
+@enduml
