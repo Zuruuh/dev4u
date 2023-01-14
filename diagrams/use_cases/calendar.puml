@@ -11,6 +11,7 @@ package Learn@Home {
     package Calendar {
         usecase "View all events for N \n period of time" as view_all_events
         usecase "Create a new event for themselves" as create_event_for_themselves
+        usecase "Create a new event for a student" as create_event_for_a_student
     }
 }
 
@@ -19,5 +20,6 @@ student --|> user
 
 user --> view_all_events
 user --> create_event_for_themselves
+teacher --> create_event_for_a_student
 
 @enduml

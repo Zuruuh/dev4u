@@ -17,7 +17,7 @@ package Learn@Home {
 teacher --|> user
 student --|> user
 
-student --> create_task_for_self
+user --> create_task_for_self
 teacher --> create_task_for_student
 
 @enduml
