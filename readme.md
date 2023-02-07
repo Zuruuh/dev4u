@@ -15,6 +15,8 @@ To keep some consistency between diagrams, some rules/guidelines might be define
 
 You can use the cli in the `bin` folder to build your images
 
+> Warning: The plantuml CLI requires `java` version ^8
+
 ```sh
 ./bin/plantuml diagrams/use_cases/my_diagram.puml
 ```
