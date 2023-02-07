@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar "$PWD/bin/plantuml-1.2023.0.jar" -o "$PWD/images" -tsvg $@
+java -jar "$PWD/bin/plantuml-1.2023.0.jar" -o "$PWD/images" $@
